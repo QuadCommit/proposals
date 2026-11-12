@@ -42,6 +42,24 @@
     "contact"
   ];
 
+  // Each partial is optional. A section is rendered only when the
+  // proposal JSON contains data for its key, so the same engine can
+  // serve proposals with different scopes without blank sections.
+  const SECTION_DATA_KEYS = {
+    hero: "hero",
+    overview: "overview",
+    scope: "scope",
+    mvp: "mvp",
+    roadmap: "roadmap",
+    architecture: "architecture",
+    stack: "stack",
+    methodology: "methodology",
+    pricing: "pricing",
+    team: "team",
+    "next-steps": "nextSteps",
+    contact: "contact"
+  };
+
   const STATUS_ACTIVE = "actual";
   const DEFAULT_SLUG = "scarling";
   const SLUG_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
@@ -158,6 +176,16 @@
     });
   }
 
+  /** True when the proposal JSON actually defines content for a section. */
+  function hasSectionData(data, key) {
+    const value = getPath(data, key);
+    if (value == null) return false;
+    if (typeof value === "string") return value.trim().length > 0;
+    if (Array.isArray(value)) return value.length > 0;
+    if (typeof value === "object") return Object.keys(value).length > 0;
+    return Boolean(value);
+  }
+
   /** Fetch a text asset (JSON or HTML partial) with a helpful error. */
   async function fetchText(url) {
     const res = await fetch(url, { headers: { Accept: "text/html,application/json" } });
@@ -197,19 +225,29 @@
     });
   }
 
-  /** Inject section partials into <main> and bind all data. */
+  /**
+   * Inject section partials into <main> and bind all data.
+   * Sections whose data key is absent from the proposal JSON are
+   * skipped. Returns the ids of the sections actually rendered so
+   * navigation can ignore any stale links.
+   */
   function render(sections, data) {
     const main = document.getElementById("proposal-content");
     if (!main) throw new Error("Elemento #proposal-content no encontrado");
 
     const fragment = document.createDocumentFragment();
+    const rendered = [];
 
     sections.forEach(function (section) {
+      const dataKey = SECTION_DATA_KEYS[section.id];
+      if (!dataKey || !hasSectionData(data, dataKey)) return;
+
       const wrapper = document.createElement("div");
       wrapper.innerHTML = section.markup.trim();
       const node = wrapper.firstElementChild;
       if (node && node.id) {
         fragment.appendChild(node);
+        rendered.push(node.id);
       }
     });
 
@@ -222,10 +260,13 @@
     // turning `data-bind="."` lists into "[object Object]".
     bindElement(document.getElementById("sidebar"), data);
     bindElement(document.querySelector(".mobile-header"), data);
+
+    return rendered;
   }
 
   global.ProposalLoader = {
     SECTION_ORDER: SECTION_ORDER,
+    SECTION_DATA_KEYS: SECTION_DATA_KEYS,
     loadData: loadData,
     loadSections: loadSections,
     render: render,

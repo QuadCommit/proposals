@@ -11,11 +11,19 @@
     sections: []
   };
 
-  function renderNav(data) {
+  function renderNav(data, renderedSections) {
     const navEl = document.getElementById("sidebar-nav");
     if (!navEl) return;
 
-    (data.nav || []).forEach(function (item) {
+    // Ignore nav entries for sections that were not rendered because
+    // their content is absent from the proposal JSON. When no list is
+    // supplied, keep the nav unfiltered for backwards compatibility.
+    const available = Array.isArray(renderedSections) ? new Set(renderedSections) : null;
+    const items = (data.nav || []).filter(function (item) {
+      return !available || available.has(item.id);
+    });
+
+    items.forEach(function (item) {
       const link = document.createElement("a");
       link.className = "nav-link";
       link.href = "#" + item.id;
@@ -148,8 +156,8 @@
   }
 
   global.ProposalNavigation = {
-    init: function (data) {
-      renderNav(data);
+    init: function (data, renderedSections) {
+      renderNav(data, renderedSections);
       collectSections();
       initScrollSpy();
       initDrawer();

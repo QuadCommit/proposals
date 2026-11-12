@@ -58,11 +58,11 @@
       // Keep the tab title and description aligned with the proposal
       applyMetadata(data);
 
-      // Populate content from data
-      window.ProposalLoader.render(sections, data);
+      // Populate content from data. Sections without JSON content are skipped.
+      const renderedSections = window.ProposalLoader.render(sections, data);
 
       // Wire sidebar navigation, scrollspy and progress (adds nav icons)
-      window.ProposalNavigation.init(data);
+      window.ProposalNavigation.init(data, renderedSections);
 
       // Materialize all Lucide icons (content + nav) in a single pass
       if (window.lucide) window.lucide.createIcons();

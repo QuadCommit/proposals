@@ -28,7 +28,6 @@
     { "id": "overview", "label": "Entendimiento", "icon": "file-text" },
     { "id": "scope", "label": "Alcance", "icon": "target" },
     { "id": "mvp", "label": "Funcionalidades", "icon": "layers" },
-    { "id": "roadmap", "label": "Fases Futuras", "icon": "trending-up" },
     { "id": "architecture", "label": "Arquitectura", "icon": "server" },
     { "id": "stack", "label": "Stack Tecnológico", "icon": "cpu" },
     { "id": "methodology", "label": "Metodología", "icon": "git-branch" },
@@ -191,45 +190,6 @@
         "description": "Libro por empresa con detalle, resumen mensual y bimensual; generación automática y envío por WhatsApp.",
         "tag": "Resultado",
         "accent": "primary"
-      }
-    ]
-  },
-  "roadmap": {
-    "eyebrow": "Fases Futuras",
-    "title": "El MVP resuelve el presente y prepara la siguiente etapa",
-    "description": "La arquitectura queda preparada para incorporar un panel web, integraciones fiscales y analítica sin rehacer el núcleo.",
-    "phases": [
-      {
-        "phase": "Fase 1",
-        "status": "actual",
-        "statusLabel": "Fase actual",
-        "title": "MVP operativo por WhatsApp",
-        "description": "Recepción, extracción con IA, validación, confirmaciones, clasificación y reportes en Excel.",
-        "items": ["WhatsApp + IA", "Validación", "Excel y reportes", "Despliegue"]
-      },
-      {
-        "phase": "Fase 2",
-        "status": "next",
-        "statusLabel": "Próxima fase",
-        "title": "Panel administrativo web",
-        "description": "Consulta, edición y conciliación desde un panel con usuarios, roles y auditoría.",
-        "items": ["Dashboard", "Usuarios y roles", "Edición y auditoría"]
-      },
-      {
-        "phase": "Fase 3",
-        "status": "next",
-        "statusLabel": "Próxima fase",
-        "title": "Integración fiscal y ERP",
-        "description": "Conexión con e-CF/DGII, sistemas ERP y conciliación bancaria.",
-        "items": ["e-CF / DGII", "ERP", "Conciliación bancaria"]
-      },
-      {
-        "phase": "Fase 4",
-        "status": "next",
-        "statusLabel": "Próxima fase",
-        "title": "Analítica y multiempresa",
-        "description": "Indicadores por proyecto, presupuestos y operación para varias empresas o unidades de negocio.",
-        "items": ["Reportes por proyecto", "Presupuestos", "Multiempresa"]
       }
     ]
   },
@@ -417,18 +377,18 @@
       {
         "icon": "scale",
         "title": "Alcance y cambios",
-        "description": "La propuesta cubre el MVP descrito. Nuevas funciones, integraciones o el panel administrativo se cotizan por separado."
+        "description": "La propuesta cubre el MVP descrito. Cualquier función o integración fuera de este alcance requiere una evaluación y cotización independiente."
       }
     ],
     "exclusions": {
       "title": "Exclusiones taxativas del MVP",
       "items": [
-        "Panel administrativo web, gestión de usuarios y roles (Fase 2)",
+        "Panel administrativo web, gestión de usuarios y roles",
         "Integración con DGII, e-CF, ERP o conciliación bancaria",
         "Consulta de estatus o validez fiscal del NCF/e-CF ante DGII; el MVP valida formato y consistencia interna",
         "Aplicación móvil nativa",
         "Operación multiempresa, multimoneda o conversión automática de divisas",
-        "Reportes por proyecto o centro de costo (Fase 2)",
+        "Reportes por proyecto o centro de costo",
         "Contabilidad formal, auditoría fiscal o presentación de declaraciones"
       ]
     }

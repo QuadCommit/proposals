@@ -26,6 +26,27 @@ scripts/
 
 El motor lee `?p=<slug>`, descarga `data/<slug>.json` y renderiza las secciones compartidas. Cambiar el diseño en `assets/` o `sections/` afecta a todas las propuestas; cambiar un JSON solo afecta a esa propuesta.
 
+## Secciones opcionales
+
+Cada sección se renderiza solo si su clave existe en el JSON de la propuesta. Si una clave falta o está vacía, la sección no se crea y su enlace se elimina del menú lateral automáticamente. No hay que modificar HTML ni JavaScript para ocultarla.
+
+| Sección | Clave en el JSON |
+|---|---|
+| Portada | `hero` |
+| Entendimiento | `overview` |
+| Alcance | `scope` |
+| Funcionalidades | `mvp` |
+| Fases futuras | `roadmap` |
+| Arquitectura | `architecture` |
+| Stack | `stack` |
+| Metodología | `methodology` |
+| Inversión | `pricing` |
+| Equipo | `team` |
+| Próximos pasos | `nextSteps` |
+| Contacto | `contact` |
+
+Por ejemplo, `scarling.json` no incluye `roadmap` porque las fases futuras de Voucherlize las ejecuta QuadCommit y no forman parte de esta propuesta. El partial `sections/roadmap.html` sigue disponible para cualquier propuesta que sí necesite mostrarlas: basta con agregar la clave `roadmap` y su entrada en `nav`.
+
 ## Agregar una propuesta
 
 1. Copia `data/scarling.json` a `data/<slug>.json`.
