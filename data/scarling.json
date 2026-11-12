@@ -12,8 +12,8 @@
       "location": "Santo Domingo, República Dominicana"
     },
     "client": {
-      "name": "Ing. Scarling",
-      "contact": "Ing. Scarling",
+      "name": "Ing. Santana",
+      "contact": "Ing. Santana",
       "city": "Santo Domingo",
       "region": "República Dominicana"
     },
@@ -39,7 +39,7 @@
   "hero": {
     "eyebrow": "Propuesta Comercial y Técnica",
     "title": "Voucherlize",
-    "titleHighlight": "Ing. Scarling",
+    "titleHighlight": "Ing. Santana",
     "subtitle": "Automatización inteligente de facturas por WhatsApp para la operación de ingeniería civil. Captura, validación y clasificación de ingresos y gastos con IA, con reportes mensuales y bimensuales en Excel.",
     "preparedFor": "Preparada para",
     "cta": {
