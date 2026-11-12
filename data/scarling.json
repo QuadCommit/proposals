@@ -322,43 +322,43 @@
   "pricing": {
     "eyebrow": "Inversión",
     "title": "Una inversión acotada para un MVP operativo",
-    "description": "El proyecto se estima en 120 horas de ingeniería durante 3 semanas. La inversión total es de RD$109,000, sin ITBIS, pagadera en 4 cuotas de RD$27,250.",
+    "description": "El proyecto se estima en 120 horas de ingeniería durante 3 semanas. La inversión total es de RD$109,000, sin ITBIS, pagadera en 4 cuotas mensuales de RD$27,250.",
     "total": {
       "label": "Desarrollo Integral MVP",
       "amount": "109,000",
       "currency": "RD$",
       "taxNote": "ITBIS no aplica para este proyecto",
       "totalWithTax": "RD$ 109,000 · Inversión total del proyecto",
-      "note": "Incluye análisis, desarrollo, pruebas con facturas reales, despliegue y transferencia. La inversión se paga en 4 cuotas de RD$27,250. Los consumos de WhatsApp, IA y hosting se pagan directamente a los proveedores."
+      "note": "Incluye análisis, desarrollo, pruebas con facturas reales, despliegue y transferencia. La inversión se paga en 4 cuotas mensuales de RD$27,250. Los consumos de WhatsApp, IA y hosting se pagan directamente a los proveedores."
     },
     "milestones": [
       {
         "percent": "25%",
         "amount": "RD$ 27,250",
-        "name": "Anticipo de inicio",
-        "trigger": "Firma del acuerdo y entrega de accesos para iniciar la Semana 1",
+        "name": "Cuota 1 · Mes 1",
+        "trigger": "Firma del acuerdo y entrega de accesos para iniciar el proyecto",
         "icon": "file-signature"
       },
       {
         "percent": "25%",
         "amount": "RD$ 27,250",
-        "name": "Avance Semana 1",
-        "trigger": "Demo del canal de WhatsApp, extracción con IA y fallback operativo",
-        "icon": "message-circle"
+        "name": "Cuota 2 · Mes 2",
+        "trigger": "Segunda cuota mensual del acuerdo de pago",
+        "icon": "calendar-days"
       },
       {
         "percent": "25%",
         "amount": "RD$ 27,250",
-        "name": "Avance Semana 2",
-        "trigger": "Validación, confirmaciones, ingresos/gastos y libro Excel",
-        "icon": "file-spreadsheet"
+        "name": "Cuota 3 · Mes 3",
+        "trigger": "Tercera cuota mensual del acuerdo de pago",
+        "icon": "calendar-days"
       },
       {
         "percent": "25%",
         "amount": "RD$ 27,250",
-        "name": "Aceptación final",
-        "trigger": "Demo final, pruebas de aceptación y despliegue en producción",
-        "icon": "rocket"
+        "name": "Cuota 4 · Mes 4",
+        "trigger": "Cuarta y última cuota mensual del acuerdo de pago",
+        "icon": "calendar-check"
       }
     ],
     "maintenance": {
