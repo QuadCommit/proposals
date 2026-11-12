@@ -21,7 +21,7 @@
       "name": "Voucherlize",
       "description": "Automatización inteligente de facturas por WhatsApp para ingeniería civil"
     },
-    "attn": "Ing. Scarling"
+    "attn": "Ing. Santana"
   },
   "nav": [
     { "id": "hero", "label": "Portada", "icon": "layout-dashboard" },
