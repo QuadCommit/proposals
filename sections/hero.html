@@ -1,0 +1,41 @@
+<section class="section hero" id="hero" data-section>
+  <div class="hero__inner">
+    <div class="hero__badge reveal reveal-up" data-reveal>
+      <span data-bind="hero.badge.label">Documento oficial</span>
+      <span class="hero__badge-dot" aria-hidden="true"></span>
+      <span data-bind="hero.badge.version">v</span>
+      <span class="hero__badge-dot" aria-hidden="true"></span>
+      <span data-bind="hero.badge.date">Fecha</span>
+    </div>
+
+    <p class="hero__eyebrow reveal reveal-up" data-reveal data-delay="1" data-bind="hero.eyebrow">Propuesta Comercial y Técnica</p>
+
+    <h1 class="hero__title reveal reveal-up" data-reveal data-delay="2">
+      <span data-bind="hero.title">Plataforma MVP</span>
+      <span class="hero__title-accent" data-bind="hero.titleHighlight">Ing. Scarling</span>
+    </h1>
+
+    <p class="hero__subtitle reveal reveal-up" data-reveal data-delay="3" data-bind="hero.subtitle"></p>
+
+    <div class="hero__meta reveal reveal-up" data-reveal data-delay="4">
+      <div class="hero__prepared">
+        <span class="hero__prepared-label" data-bind="hero.preparedFor">Preparada para</span>
+        <strong data-bind="meta.client.name">Cliente</strong>
+        <span class="hero__prepared-sub">
+          <span data-bind="meta.client.city"></span> · <span data-bind="meta.client.region"></span>
+        </span>
+      </div>
+    </div>
+
+    <div class="hero__actions reveal reveal-up" data-reveal data-delay="5">
+      <a class="btn btn--primary" href="#" data-bind-href="hero.cta.href" data-nav-link>
+        <i data-lucide="arrow-right" class="btn__icon"></i>
+        <span data-bind="hero.cta.label">Iniciar Proyecto</span>
+      </a>
+      <a class="btn btn--ghost" href="#" data-bind-href="hero.pdf.href" download>
+        <i data-lucide="download" class="btn__icon"></i>
+        <span data-bind="hero.pdf.label">Descargar PDF</span>
+      </a>
+    </div>
+  </div>
+</section>

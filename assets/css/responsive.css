@@ -1,0 +1,154 @@
+/* ============================================================
+   responsive.css — Tablet & mobile adaptations
+   Proposal Engine · QuadCommit
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   Large tablet / small laptop
+   ------------------------------------------------------------ */
+@media (max-width: 1180px) {
+  .stack-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ------------------------------------------------------------
+   Tablet — sidebar becomes a drawer
+   ------------------------------------------------------------ */
+@media (max-width: 960px) {
+  :root {
+    --sidebar-w: 300px;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform var(--dur) var(--ease);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .sidebar.is-open {
+    transform: translateX(0);
+  }
+
+  .mobile-header {
+    display: flex;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  .section {
+    min-height: auto;
+    padding: var(--space-12) var(--space-6);
+    scroll-margin-top: 72px;
+  }
+
+  .pricing {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------------------------------------
+   Mobile
+   ------------------------------------------------------------ */
+@media (max-width: 720px) {
+  .card-grid--3,
+  .stack-list,
+  .stack-group__grid,
+  .contact__details {
+    grid-template-columns: 1fr;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__title {
+    font-size: clamp(2.25rem, 9vw, 3rem);
+  }
+
+  .section__title {
+    font-size: 1.5rem;
+  }
+
+  .milestone {
+    grid-template-columns: 42px 1fr;
+  }
+
+  .milestone__amount {
+    grid-column: 2;
+    align-items: flex-start;
+  }
+
+  .milestone__amount span {
+    text-align: left;
+  }
+
+  .maintenance-card__head {
+    grid-template-columns: auto 1fr;
+  }
+
+  .maintenance-card__price {
+    grid-column: 2;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .maintenance-card__list {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-band {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .roadmap__item {
+    grid-template-columns: 32px 1fr;
+    gap: var(--space-3);
+  }
+
+  .diagram {
+    padding: var(--space-6);
+    padding-top: var(--space-12);
+  }
+
+  .diagram__row--bottom {
+    flex-direction: column;
+  }
+
+  .diagram__node {
+    flex: none;
+  }
+}
+
+/* ------------------------------------------------------------
+   Small mobile
+   ------------------------------------------------------------ */
+@media (max-width: 480px) {
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+
+  .contact__details {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing__amount strong {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,48 @@
+<section class="section" id="overview" data-section>
+  <div class="container">
+    <header class="section__header reveal reveal-up" data-reveal>
+      <p class="section__eyebrow" data-bind="overview.eyebrow">Resumen Ejecutivo</p>
+      <h2 class="section__title" data-bind="overview.title"></h2>
+      <p class="section__description" data-bind="overview.description"></p>
+    </header>
+
+    <div class="split reveal reveal-up" data-reveal data-delay="2">
+      <div class="split__main">
+        <h3 class="split__title">
+          <i data-lucide="shield-alert" class="split__title-icon" aria-hidden="true"></i>
+          <span data-bind="overview.challenges.title">El desafío del mercado</span>
+        </h3>
+        <div class="stack-list">
+          <template data-repeat="overview.challenges.items">
+            <article class="stack-item">
+              <span class="stack-item__icon" aria-hidden="true"><i data-bind-icon="icon"></i></span>
+              <div class="stack-item__body">
+                <h4 data-bind="title"></h4>
+                <p data-bind="description"></p>
+              </div>
+            </article>
+          </template>
+        </div>
+      </div>
+    </div>
+
+    <div class="value-matrix">
+      <h3 class="split__title reveal reveal-up" data-reveal>
+        <i data-lucide="lightbulb" class="split__title-icon" aria-hidden="true"></i>
+        <span data-bind="overview.solutions.title">La solución basada en la problemática</span>
+      </h3>
+      <div class="card-grid card-grid--3 reveal reveal-up" data-reveal data-delay="1">
+        <template data-repeat="overview.solutions.items">
+          <article class="card card--hover">
+            <div class="card__top">
+              <span class="card__icon" aria-hidden="true"><i data-bind-icon="icon"></i></span>
+              <span class="tag tag--primary" data-bind="problem"></span>
+            </div>
+            <h4 class="card__title" data-bind="title"></h4>
+            <p class="card__text" data-bind="description"></p>
+          </article>
+        </template>
+      </div>
+    </div>
+  </div>
+</section>

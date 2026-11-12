@@ -1,0 +1,22 @@
+<section class="section" id="mvp" data-section>
+  <div class="container">
+    <header class="section__header reveal reveal-up" data-reveal>
+      <p class="section__eyebrow" data-bind="mvp.eyebrow">Funcionalidades MVP</p>
+      <h2 class="section__title" data-bind="mvp.title"></h2>
+      <p class="section__description" data-bind="mvp.description"></p>
+    </header>
+
+    <div class="card-grid card-grid--3 reveal reveal-up" data-reveal data-delay="1">
+      <template data-repeat="mvp.features">
+        <article class="card card--feature">
+          <div class="card__top">
+            <span class="card__icon" aria-hidden="true"><i data-bind-icon="icon"></i></span>
+            <span class="tag tag--accent" data-bind-accent data-bind="tag"></span>
+          </div>
+          <h3 class="card__title" data-bind="title"></h3>
+          <p class="card__text" data-bind="description"></p>
+        </article>
+      </template>
+    </div>
+  </div>
+</section>

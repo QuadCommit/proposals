@@ -1,0 +1,28 @@
+<section class="section" id="stack" data-section>
+  <div class="container">
+    <header class="section__header reveal reveal-up" data-reveal>
+      <p class="section__eyebrow" data-bind="stack.eyebrow">Stack Tecnológico</p>
+      <h2 class="section__title" data-bind="stack.title"></h2>
+      <p class="section__description" data-bind="stack.description"></p>
+    </header>
+
+    <div class="stack-groups">
+      <template data-repeat="stack.categories">
+        <div class="stack-group reveal reveal-up" data-reveal>
+          <h3 class="stack-group__title" data-bind="name"></h3>
+          <div class="stack-group__grid">
+            <template data-repeat="items">
+              <div class="stack-chip">
+                <span class="stack-chip__icon" aria-hidden="true"><i data-bind-icon="icon"></i></span>
+                <div class="stack-chip__body">
+                  <strong data-bind="name"></strong>
+                  <span data-bind="description"></span>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </template>
+    </div>
+  </div>
+</section>

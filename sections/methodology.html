@@ -1,0 +1,61 @@
+<section class="section" id="methodology" data-section>
+  <div class="container">
+    <header class="section__header reveal reveal-up" data-reveal>
+      <p class="section__eyebrow" data-bind="methodology.eyebrow">Metodología</p>
+      <h2 class="section__title" data-bind="methodology.title"></h2>
+      <p class="section__description" data-bind="methodology.description"></p>
+    </header>
+
+    <div class="card-grid card-grid--3 reveal reveal-up" data-reveal data-delay="1">
+      <template data-repeat="methodology.principles.items">
+        <article class="card card--hover">
+          <div class="card__top">
+            <span class="card__icon" aria-hidden="true"><i data-bind-icon="icon"></i></span>
+          </div>
+          <h3 class="card__title" data-bind="title"></h3>
+          <p class="card__text" data-bind="description"></p>
+        </article>
+      </template>
+    </div>
+
+    <div class="split reveal reveal-up" data-reveal data-delay="2">
+      <div class="split__main">
+        <h3 class="split__title">
+          <i data-lucide="calendar-clock" class="split__title-icon" aria-hidden="true"></i>
+          <span data-bind="methodology.meetings.title">Reuniones de seguimiento</span>
+        </h3>
+        <div class="stack-list">
+          <template data-repeat="methodology.meetings.items">
+            <article class="stack-item">
+              <span class="stack-item__icon" aria-hidden="true"><i data-bind-icon="icon"></i></span>
+              <div class="stack-item__body">
+                <h4 data-bind="title"></h4>
+                <p data-bind="description"></p>
+              </div>
+            </article>
+          </template>
+        </div>
+      </div>
+    </div>
+
+    <div class="split reveal reveal-up" data-reveal data-delay="3">
+      <div class="split__main">
+        <h3 class="split__title">
+          <i data-lucide="flag" class="split__title-icon" aria-hidden="true"></i>
+          <span data-bind="methodology.milestones.title">Hitos de entrega</span>
+        </h3>
+        <div class="stack-list">
+          <template data-repeat="methodology.milestones.items">
+            <article class="stack-item">
+              <span class="stack-item__icon" aria-hidden="true"><i data-bind-icon="icon"></i></span>
+              <div class="stack-item__body">
+                <h4 data-bind="title"></h4>
+                <p data-bind="description"></p>
+              </div>
+            </article>
+          </template>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

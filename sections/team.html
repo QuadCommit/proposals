@@ -1,0 +1,31 @@
+<section class="section" id="team" data-section>
+  <div class="container">
+    <header class="section__header reveal reveal-up" data-reveal>
+      <p class="section__eyebrow" data-bind="team.eyebrow">Equipo del Proyecto</p>
+      <h2 class="section__title" data-bind="team.title"></h2>
+      <p class="section__description" data-bind="team.description"></p>
+    </header>
+
+    <div class="card-grid card-grid--3 reveal reveal-up" data-reveal data-delay="1">
+      <template data-repeat="team.members">
+        <article class="card card--member">
+          <div class="member">
+            <span class="member__avatar" data-bind-accent aria-hidden="true">
+              <span data-bind="initials"></span>
+            </span>
+            <div class="member__head">
+              <h3 class="card__title" data-bind="name"></h3>
+              <p class="member__role" data-bind="role"></p>
+            </div>
+          </div>
+          <p class="card__text" data-bind="focus"></p>
+          <div class="member__skills">
+            <template data-repeat="skills">
+              <span class="chip" data-bind="."></span>
+            </template>
+          </div>
+        </article>
+      </template>
+    </div>
+  </div>
+</section>

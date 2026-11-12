@@ -1,0 +1,92 @@
+<section class="section" id="architecture" data-section>
+  <div class="container">
+    <header class="section__header reveal reveal-up" data-reveal>
+      <p class="section__eyebrow" data-bind="architecture.eyebrow">Arquitectura Técnica</p>
+      <h2 class="section__title" data-bind="architecture.title"></h2>
+      <p class="section__description" data-bind="architecture.description"></p>
+    </header>
+
+    <div class="diagram reveal reveal-up" data-reveal data-delay="1" role="img"
+         aria-label="Diagrama de arquitectura de alto nivel de la plataforma">
+      <div class="diagram__caption" data-bind="architecture.diagram.caption">Diagrama de alto nivel</div>
+
+      <div class="diagram__row diagram__row--top">
+        <div class="diagram__node diagram__node--client">
+          <span class="diagram__node-icon" aria-hidden="true"><i data-bind-icon="architecture.diagram.client.icon"></i></span>
+          <div class="diagram__node-body">
+            <strong data-bind="architecture.diagram.client.name">Cliente</strong>
+            <span data-bind="architecture.diagram.client.description">Web</span>
+          </div>
+        </div>
+        <div class="diagram__flow" aria-hidden="true"><i data-lucide="arrow-down"></i></div>
+        <div class="diagram__node diagram__node--api">
+          <span class="diagram__node-icon" aria-hidden="true"><i data-bind-icon="architecture.diagram.api.icon"></i></span>
+          <div class="diagram__node-body">
+            <strong data-bind="architecture.diagram.api.name">API</strong>
+            <span data-bind="architecture.diagram.api.description">REST + JWT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="diagram__row diagram__row--modules">
+        <template data-repeat="architecture.diagram.modules">
+          <div class="diagram__module">
+            <span class="diagram__module-icon" aria-hidden="true"><i data-bind-icon="icon"></i></span>
+            <strong data-bind="name"></strong>
+          </div>
+        </template>
+      </div>
+
+      <div class="diagram__row diagram__row--bottom">
+        <div class="diagram__node">
+          <span class="diagram__node-icon" aria-hidden="true"><i data-bind-icon="architecture.diagram.data.icon"></i></span>
+          <div class="diagram__node-body">
+            <strong data-bind="architecture.diagram.data.name">PostgreSQL</strong>
+            <span data-bind="architecture.diagram.data.description"></span>
+          </div>
+        </div>
+        <div class="diagram__node">
+          <span class="diagram__node-icon" aria-hidden="true"><i data-bind-icon="architecture.diagram.ai.icon"></i></span>
+          <div class="diagram__node-body">
+            <strong data-bind="architecture.diagram.ai.name">Proveedores IA</strong>
+            <span data-bind="architecture.diagram.ai.description"></span>
+          </div>
+        </div>
+        <div class="diagram__node">
+          <span class="diagram__node-icon" aria-hidden="true"><i data-bind-icon="architecture.diagram.storage.icon"></i></span>
+          <div class="diagram__node-body">
+            <strong data-bind="architecture.diagram.storage.name">Almacenamiento</strong>
+            <span data-bind="architecture.diagram.storage.description"></span>
+          </div>
+        </div>
+        <div class="diagram__node">
+          <span class="diagram__node-icon" aria-hidden="true"><i data-bind-icon="architecture.diagram.notifications.icon"></i></span>
+          <div class="diagram__node-body">
+            <strong data-bind="architecture.diagram.notifications.name">WhatsApp</strong>
+            <span data-bind="architecture.diagram.notifications.description"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-grid card-grid--3 reveal reveal-up" data-reveal data-delay="2">
+      <template data-repeat="architecture.components">
+        <article class="card card--hover">
+          <div class="card__top">
+            <span class="card__icon" aria-hidden="true"><i data-bind-icon="icon"></i></span>
+          </div>
+          <h3 class="card__title" data-bind="title"></h3>
+          <p class="card__text" data-bind="description"></p>
+          <ul class="card__list">
+            <template data-repeat="items">
+              <li>
+                <i data-lucide="check" class="card__list-icon" aria-hidden="true"></i>
+                <span data-bind="."></span>
+              </li>
+            </template>
+          </ul>
+        </article>
+      </template>
+    </div>
+  </div>
+</section>

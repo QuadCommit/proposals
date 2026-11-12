@@ -1,0 +1,522 @@
+{
+  "meta": {
+    "language": "es",
+    "documentType": "Propuesta Comercial y Técnica",
+    "version": "v1.0",
+    "date": "Noviembre 2026",
+    "company": {
+      "name": "QuadCommit",
+      "tagline": "Software Engineering & Digital Transformation",
+      "email": "mario@quadcommit.dev",
+      "website": "quadcommit.dev",
+      "location": "Santo Domingo, República Dominicana"
+    },
+    "client": {
+      "name": "Ing. Scarling",
+      "contact": "Ing. Scarling",
+      "city": "Santo Domingo",
+      "region": "República Dominicana"
+    },
+    "project": {
+      "name": "Voucherlize",
+      "description": "Automatización inteligente de facturas por WhatsApp para ingeniería civil"
+    },
+    "attn": "Ing. Scarling"
+  },
+  "nav": [
+    { "id": "hero", "label": "Portada", "icon": "layout-dashboard" },
+    { "id": "overview", "label": "Entendimiento", "icon": "file-text" },
+    { "id": "scope", "label": "Alcance", "icon": "target" },
+    { "id": "mvp", "label": "Funcionalidades", "icon": "layers" },
+    { "id": "roadmap", "label": "Fases Futuras", "icon": "trending-up" },
+    { "id": "architecture", "label": "Arquitectura", "icon": "server" },
+    { "id": "stack", "label": "Stack Tecnológico", "icon": "cpu" },
+    { "id": "methodology", "label": "Metodología", "icon": "git-branch" },
+    { "id": "pricing", "label": "Inversión", "icon": "credit-card" },
+    { "id": "team", "label": "Equipo", "icon": "users" },
+    { "id": "next-steps", "label": "Próximos Pasos", "icon": "rocket" },
+    { "id": "contact", "label": "Contacto", "icon": "mail" }
+  ],
+  "hero": {
+    "eyebrow": "Propuesta Comercial y Técnica",
+    "title": "Voucherlize",
+    "titleHighlight": "Ing. Scarling",
+    "subtitle": "Automatización inteligente de facturas por WhatsApp para la operación de ingeniería civil. Captura, validación y clasificación de ingresos y gastos con IA, con reportes mensuales y bimensuales en Excel.",
+    "preparedFor": "Preparada para",
+    "cta": {
+      "label": "Iniciar proyecto",
+      "href": "#next-steps"
+    },
+    "pdf": {
+      "label": "Descargar PDF",
+      "href": "pdf/scarling.pdf"
+    },
+    "badge": {
+      "label": "Documento oficial",
+      "version": "v1.0",
+      "date": "Noviembre 2026"
+    }
+  },
+  "overview": {
+    "eyebrow": "Entendimiento del Proyecto",
+    "title": "Menos tiempo capturando facturas, más tiempo controlando la obra",
+    "description": "La operación de un ingeniero civil genera decenas de comprobantes cada mes: materiales, subcontratistas, equipos, servicios y facturas emitidas. Cuando la captura es manual, los reportes llegan tarde y las decisiones se toman con información incompleta. Voucherlize convierte WhatsApp en el punto de entrada único de esa información.",
+    "challenges": {
+      "title": "Lo que hoy consume tiempo y genera errores",
+      "items": [
+        {
+          "icon": "receipt",
+          "title": "Captura manual y dispersa",
+          "description": "Las facturas llegan en foto, PDF o papel. Transcribir montos, RNC y NCF consume horas y abre la puerta a errores que luego son difíciles de rastrear."
+        },
+        {
+          "icon": "calendar-clock",
+          "title": "Cierres tardíos",
+          "description": "Los ingresos y gastos se consolidan al final del mes o del bimestre, cuando ya no hay margen para corregir a tiempo ni para entender qué pasó con la caja."
+        },
+        {
+          "icon": "shield-alert",
+          "title": "Poca trazabilidad",
+          "description": "Sin un registro uniforme es difícil saber qué factura se confirmó, cuál se duplicó y cuál quedó pendiente de revisión."
+        }
+      ]
+    },
+    "solutions": {
+      "title": "La solución: un flujo simple y verificable",
+      "items": [
+        {
+          "icon": "message-circle",
+          "problem": "Captura",
+          "title": "WhatsApp como bandeja",
+          "description": "El equipo envía la foto o el PDF de la factura al número de la empresa. No hay que instalar una aplicación nueva ni entrar a un sistema."
+        },
+        {
+          "icon": "sparkles",
+          "problem": "Automatización",
+          "title": "Extracción con IA",
+          "description": "Gemini, Claude y OpenAI trabajan con respaldo automático para leer RNC, NCF, fechas, subtotales, impuestos y totales."
+        },
+        {
+          "icon": "file-spreadsheet",
+          "problem": "Control",
+          "title": "Excel siempre al día",
+          "description": "Cada factura confirmada se registra en el libro de la empresa y alimenta los reportes mensuales y bimensuales de ingresos y gastos."
+        }
+      ]
+    }
+  },
+  "scope": {
+    "eyebrow": "Alcance del Proyecto",
+    "title": "Un flujo directo para operar la facturación diaria",
+    "description": "El MVP se concentra en tres piezas: recibir facturas, confirmar los datos y consultar resultados. No incluye un panel administrativo; la operación se hace por WhatsApp y el resultado vive en Excel.",
+    "roles": [
+      {
+        "icon": "user",
+        "name": "Ing. Scarling / Operación",
+        "description": "Envía las facturas, confirma o corrige la información y consulta los resultados.",
+        "abilities": [
+          "Enviar foto o PDF por WhatsApp",
+          "Confirmar o corregir extracciones",
+          "Consultar ingresos y gastos",
+          "Recibir reportes en Excel"
+        ]
+      },
+      {
+        "icon": "bot",
+        "name": "Asistente Voucherlize",
+        "description": "Recibe, extrae, valida, clasifica y responde en lenguaje natural.",
+        "abilities": [
+          "Lectura de facturas con IA",
+          "Validación y detección de duplicados",
+          "Clasificación ingreso / gasto",
+          "Respuestas y reportes por WhatsApp"
+        ]
+      },
+      {
+        "icon": "file-spreadsheet",
+        "name": "Libro Excel",
+        "description": "Registro consolidado de la operación, con detalle y resúmenes por período.",
+        "abilities": [
+          "Detalle de facturas y movimientos",
+          "Resumen mensual",
+          "Resumen bimensual",
+          "Trazabilidad de confirmaciones"
+        ]
+      }
+    ]
+  },
+  "mvp": {
+    "eyebrow": "Funcionalidades MVP",
+    "title": "Lo esencial para operar desde el primer día",
+    "description": "Cada módulo está pensado para reducir la captura manual y dar confianza sobre los números, sin agregar complejidad operativa.",
+    "features": [
+      {
+        "icon": "message-circle",
+        "title": "Recepción por WhatsApp",
+        "description": "Fotos y PDF de facturas recibidas en el número empresarial, con descarga automática del archivo original.",
+        "tag": "Canal",
+        "accent": "primary"
+      },
+      {
+        "icon": "sparkles",
+        "title": "IA con respaldo automático",
+        "description": "Gemini, Claude y OpenAI con conmutación automática ante errores, límites o baja confianza del proveedor.",
+        "tag": "Inteligencia",
+        "accent": "success"
+      },
+      {
+        "icon": "shield-check",
+        "title": "Validación de datos",
+        "description": "RNC, NCF, fecha, subtotal, ITBIS y total. Consistencia aritmética y detección de facturas duplicadas.",
+        "tag": "Control",
+        "accent": "primary"
+      },
+      {
+        "icon": "clipboard-check",
+        "title": "Confirmación humana",
+        "description": "El bot resume la factura y pide confirmar, corregir o descartar antes de registrarla en el libro.",
+        "tag": "Trazabilidad",
+        "accent": "warning"
+      },
+      {
+        "icon": "arrow-left-right",
+        "title": "Ingresos y gastos",
+        "description": "Se usa el RNC de la empresa: si aparece como emisor es ingreso; si aparece como receptor es gasto. Los casos ambiguos se consultan.",
+        "tag": "Finanzas",
+        "accent": "success"
+      },
+      {
+        "icon": "file-spreadsheet",
+        "title": "Excel y reportes",
+        "description": "Libro por empresa con detalle, resumen mensual y bimensual; generación automática y envío por WhatsApp.",
+        "tag": "Resultado",
+        "accent": "primary"
+      }
+    ]
+  },
+  "roadmap": {
+    "eyebrow": "Fases Futuras",
+    "title": "El MVP resuelve el presente y prepara la siguiente etapa",
+    "description": "La arquitectura queda preparada para incorporar un panel web, integraciones fiscales y analítica sin rehacer el núcleo.",
+    "phases": [
+      {
+        "phase": "Fase 1",
+        "status": "actual",
+        "statusLabel": "Fase actual",
+        "title": "MVP operativo por WhatsApp",
+        "description": "Recepción, extracción con IA, validación, confirmaciones, clasificación y reportes en Excel.",
+        "items": ["WhatsApp + IA", "Validación", "Excel y reportes", "Despliegue"]
+      },
+      {
+        "phase": "Fase 2",
+        "status": "next",
+        "statusLabel": "Próxima fase",
+        "title": "Panel administrativo web",
+        "description": "Consulta, edición y conciliación desde un panel con usuarios, roles y auditoría.",
+        "items": ["Dashboard", "Usuarios y roles", "Edición y auditoría"]
+      },
+      {
+        "phase": "Fase 3",
+        "status": "next",
+        "statusLabel": "Próxima fase",
+        "title": "Integración fiscal y ERP",
+        "description": "Conexión con e-CF/DGII, sistemas ERP y conciliación bancaria.",
+        "items": ["e-CF / DGII", "ERP", "Conciliación bancaria"]
+      },
+      {
+        "phase": "Fase 4",
+        "status": "next",
+        "statusLabel": "Próxima fase",
+        "title": "Analítica y multiempresa",
+        "description": "Indicadores por proyecto, presupuestos y operación para varias empresas o unidades de negocio.",
+        "items": ["Reportes por proyecto", "Presupuestos", "Multiempresa"]
+      }
+    ]
+  },
+  "architecture": {
+    "eyebrow": "Arquitectura Técnica",
+    "title": "Un flujo claro, con puntos de control en cada etapa",
+    "description": "WhatsApp recibe el comprobante; el backend orquesta IA, validación y persistencia; PostgreSQL conserva la verdad del negocio y Excel materializa los reportes.",
+    "diagram": {
+      "caption": "Flujo de alto nivel",
+      "client": { "name": "WhatsApp", "description": "Foto o PDF", "icon": "message-circle" },
+      "api": { "name": "Backend FastAPI", "description": "Webhook + orquestación", "icon": "server" },
+      "modules": [
+        { "name": "Extracción IA", "icon": "sparkles" },
+        { "name": "Validación", "icon": "shield-check" },
+        { "name": "Confirmaciones", "icon": "clipboard-check" },
+        { "name": "Reportes", "icon": "file-spreadsheet" }
+      ],
+      "data": { "name": "PostgreSQL", "description": "Facturas y auditoría", "icon": "database" },
+      "ai": { "name": "Proveedores IA", "description": "Gemini · Claude · OpenAI", "icon": "sparkles" },
+      "storage": { "name": "Almacenamiento", "description": "Facturas originales", "icon": "folder-lock" },
+      "notifications": { "name": "WhatsApp Business", "description": "Confirmaciones y reportes", "icon": "message-circle" }
+    },
+    "components": [
+      {
+        "icon": "message-circle",
+        "title": "Canal WhatsApp",
+        "description": "Integración con Meta Cloud API para recibir imágenes y PDF, descargar el contenido y responder con mensajes interactivos.",
+        "items": ["Webhook seguro", "Imágenes y PDF", "Confirmaciones"]
+      },
+      {
+        "icon": "server",
+        "title": "Backend de orquestación",
+        "description": "FastAPI coordina el pipeline, aplica reglas de negocio y controla reintentos e idempotencia.",
+        "items": ["FastAPI + Python", "Reintentos controlados", "Procesamiento idempotente"]
+      },
+      {
+        "icon": "sparkles",
+        "title": "Capa de IA con fallback",
+        "description": "Un adaptador común para Gemini, Claude y OpenAI. Si un proveedor falla o no alcanza la confianza mínima, el siguiente continúa.",
+        "items": ["Gemini", "Claude", "OpenAI"]
+      },
+      {
+        "icon": "shield-check",
+        "title": "Validación y confirmaciones",
+        "description": "Reglas deterministas sobre los datos extraídos. Nada se registra como definitivo sin confirmación o corrección del usuario.",
+        "items": ["RNC / NCF", "Duplicados", "Confirmación humana"]
+      },
+      {
+        "icon": "database",
+        "title": "PostgreSQL",
+        "description": "Fuente de verdad con historial de facturas, estados, correcciones y auditoría de cambios.",
+        "items": ["Facturas y movimientos", "Estados y auditoría", "Respaldos"]
+      },
+      {
+        "icon": "file-spreadsheet",
+        "title": "Excel y reportes",
+        "description": "Libro por empresa y generación de reportes mensuales y bimensuales listos para compartir.",
+        "items": ["Detalle de facturas", "Resumen por período", "Envío por WhatsApp"]
+      }
+    ]
+  },
+  "stack": {
+    "eyebrow": "Stack Tecnológico",
+    "title": "Tecnología probada, operación sencilla",
+    "description": "Se reutiliza el núcleo ya construido en Voucherlize y se agregan las piezas necesarias para WhatsApp y los reportes periódicos.",
+    "categories": [
+      {
+        "name": "Canal y automatización",
+        "items": [
+          { "icon": "message-circle", "name": "WhatsApp Cloud API", "description": "Canal de entrada y salida" },
+          { "icon": "webhook", "name": "Webhooks", "description": "Recepción de mensajes" },
+          { "icon": "bot", "name": "Asistente", "description": "Conversación y consultas" }
+        ]
+      },
+      {
+        "name": "Inteligencia artificial",
+        "items": [
+          { "icon": "sparkles", "name": "Gemini", "description": "Extracción principal" },
+          { "icon": "brain", "name": "Claude", "description": "Respaldo de extracción" },
+          { "icon": "bot", "name": "OpenAI", "description": "Segundo respaldo" }
+        ]
+      },
+      {
+        "name": "Backend y datos",
+        "items": [
+          { "icon": "server", "name": "Python / FastAPI", "description": "Orquestación y API" },
+          { "icon": "database", "name": "PostgreSQL", "description": "Datos y auditoría" },
+          { "icon": "file-spreadsheet", "name": "openpyxl", "description": "Generación de Excel" }
+        ]
+      },
+      {
+        "name": "Infraestructura",
+        "items": [
+          { "icon": "container", "name": "Docker", "description": "Servicios reproducibles" },
+          { "icon": "cloud", "name": "VPS cloud", "description": "Despliegue del backend" },
+          { "icon": "git-branch", "name": "Git + CI/CD", "description": "Versionado y entregas" }
+        ]
+      }
+    ]
+  },
+  "methodology": {
+    "eyebrow": "Metodología",
+    "title": "Tres semanas, tres entregas verificables",
+    "description": "El cronograma se estima en 120 horas de ingeniería. Cada semana cierra con una demo funcional sobre el ambiente de pruebas y un criterio de aceptación concreto.",
+    "principles": {
+      "title": "Principios de trabajo",
+      "items": [
+        { "icon": "message-square", "title": "Comunicación continua", "description": "Canal directo por WhatsApp y reuniones cortas de seguimiento dos veces por semana." },
+        { "icon": "check-circle", "title": "Entregas verificables", "description": "Cada semana termina con una demo y una lista de verificación acordada con el cliente." },
+        { "icon": "git-commit", "title": "Cambios controlados", "description": "Todo lo que no esté en esta propuesta se evalúa como cambio de alcance, con impacto en tiempo y costo." }
+      ]
+    },
+    "meetings": {
+      "title": "Ritmo de trabajo",
+      "items": [
+        { "icon": "calendar-clock", "title": "Kickoff", "description": "Alineación de alcance, accesos, RNC de la empresa, número de WhatsApp y facturas de muestra." },
+        { "icon": "presentation", "title": "Demo semanal", "description": "Revisión de lo construido, pruebas con facturas reales y priorización de ajustes." },
+        { "icon": "messages-square", "title": "Canal de dudas", "description": "Comunicación directa para consultas operativas durante las tres semanas." }
+      ]
+    },
+    "milestones": {
+      "title": "Hitos de entrega",
+      "items": [
+        { "icon": "message-circle", "title": "Semana 1 · Canal e IA", "description": "WhatsApp recibiendo facturas, extracción con Gemini, Claude y OpenAI, y fallback operativo." },
+        { "icon": "file-spreadsheet", "title": "Semana 2 · Control y Excel", "description": "Validación, confirmaciones, clasificación ingreso/gasto y libro Excel con detalle y resumen." },
+        { "icon": "rocket", "title": "Semana 3 · Reportes y producción", "description": "Reportes mensuales y bimensuales, pruebas con facturas reales, despliegue y transferencia." }
+      ]
+    }
+  },
+  "pricing": {
+    "eyebrow": "Inversión",
+    "title": "Una inversión acotada para un MVP operativo",
+    "description": "El proyecto se estima en 120 horas de ingeniería durante 3 semanas. La inversión total es de US$1,800, sin ITBIS, pagadera 50% al inicio y 50% contra la aceptación final.",
+    "total": {
+      "label": "Desarrollo Integral MVP",
+      "amount": "$1,800",
+      "currency": "USD",
+      "taxNote": "ITBIS no aplica para este proyecto",
+      "totalWithTax": "USD $1,800 · Inversión total del proyecto",
+      "note": "Incluye análisis, desarrollo, pruebas con facturas reales, despliegue y transferencia. Los consumos de WhatsApp, IA y hosting se pagan directamente a los proveedores."
+    },
+    "milestones": [
+      {
+        "percent": "50%",
+        "amount": "$900 USD",
+        "name": "Anticipo de inicio",
+        "trigger": "Firma del acuerdo y entrega de accesos para iniciar la Semana 1",
+        "icon": "file-signature"
+      },
+      {
+        "percent": "50%",
+        "amount": "$900 USD",
+        "name": "Aceptación final",
+        "trigger": "Demo final, pruebas de aceptación y despliegue en producción",
+        "icon": "rocket"
+      }
+    ],
+    "maintenance": {
+      "eyebrow": "Continuidad operativa",
+      "title": "Mantenimiento y soporte",
+      "description": "Servicio mensual para mantener el bot, las integraciones y los reportes operativos después del Go-Live.",
+      "amount": "$50",
+      "period": "USD / mes",
+      "items": [
+        "Monitoreo del canal de WhatsApp y del pipeline de facturas",
+        "Soporte correctivo de lunes a viernes, 9:00–18:00 (AST)",
+        "Respuesta inicial a incidencias críticas en hasta 4 horas laborables",
+        "Hasta 4 horas mensuales de ajustes menores: prompts, reglas y parámetros",
+        "Actualizaciones de seguridad y verificación de respaldos",
+        "Revisión de los reportes mensuales y bimensuales"
+      ],
+      "note": "Costo recurrente separado de la inversión de US$1,800. Inicia el mes siguiente al Go-Live, después de los 30 días de garantía por defectos del alcance entregado. No incluye nuevas funcionalidades, integraciones adicionales ni consumos de terceros. Facturación mensual; cancelación con 30 días de aviso. Las horas no utilizadas no se acumulan."
+    },
+    "terms": [
+      {
+        "icon": "receipt",
+        "title": "Costos de terceros",
+        "description": "WhatsApp Business, consumo de Gemini/Claude/OpenAI, VPS, dominio y certificados se contratan a nombre de Ing. Scarling y no están incluidos en la inversión."
+      },
+      {
+        "icon": "shield",
+        "title": "Dependencias del cliente",
+        "description": "El cronograma inicia cuando estén disponibles el número de WhatsApp, la verificación de Meta, las claves de IA y las facturas de muestra. Las demoras externas ajustan la entrega."
+      },
+      {
+        "icon": "scale",
+        "title": "Alcance y cambios",
+        "description": "La propuesta cubre el MVP descrito. Nuevas funciones, integraciones o el panel administrativo se cotizan por separado."
+      }
+    ],
+    "exclusions": {
+      "title": "Exclusiones taxativas del MVP",
+      "items": [
+        "Panel administrativo web, gestión de usuarios y roles (Fase 2)",
+        "Integración con DGII, e-CF, ERP o conciliación bancaria",
+        "Consulta de estatus o validez fiscal del NCF/e-CF ante DGII; el MVP valida formato y consistencia interna",
+        "Aplicación móvil nativa",
+        "Operación multiempresa, multimoneda o conversión automática de divisas",
+        "Reportes por proyecto o centro de costo (Fase 2)",
+        "Contabilidad formal, auditoría fiscal o presentación de declaraciones"
+      ]
+    }
+  },
+  "team": {
+    "eyebrow": "Conoce al equipo",
+    "title": "El equipo detrás de Voucherlize",
+    "description": "Un equipo pequeño y senior, con experiencia en producto, backend, datos e infraestructura.",
+    "members": [
+      {
+        "name": "Mario",
+        "role": "Project Manager & Producto",
+        "focus": "Coordinación del proyecto, experiencia de usuario y comunicación con el cliente.",
+        "skills": ["Gestión ágil", "Producto", "UI/UX"],
+        "initials": "MP",
+        "color": "primary"
+      },
+      {
+        "name": "Gabriel",
+        "role": "Senior Backend & QA",
+        "focus": "Lógica de negocio, validación, calidad y pruebas con facturas reales.",
+        "skills": ["Backend", "QA", "Datos"],
+        "initials": "G",
+        "color": "success"
+      },
+      {
+        "name": "Steven",
+        "role": "Backend & DevOps",
+        "focus": "Integraciones, infraestructura, despliegue y operación del sistema.",
+        "skills": ["Integraciones", "DevOps", "Cloud"],
+        "initials": "S",
+        "color": "warning"
+      }
+    ]
+  },
+  "nextSteps": {
+    "eyebrow": "Próximos Pasos",
+    "title": "De la aprobación al primer reporte en tres semanas",
+    "description": "Un arranque ordenado, con accesos y muestras listas desde el primer día.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Aprobación de la propuesta",
+        "description": "Confirmación del alcance, la inversión y el esquema de pago.",
+        "icon": "file-check"
+      },
+      {
+        "number": "02",
+        "title": "Firma y anticipo",
+        "description": "Formalización del acuerdo y pago del 50% para reservar el cronograma.",
+        "icon": "pen-line"
+      },
+      {
+        "number": "03",
+        "title": "Accesos y facturas de muestra",
+        "description": "Número de WhatsApp, verificación de Meta, claves de IA y 10–20 facturas reales.",
+        "icon": "key"
+      },
+      {
+        "number": "04",
+        "title": "Kickoff y Semana 1",
+        "description": "Inicio del desarrollo, configuración del entorno y primera demo funcional.",
+        "icon": "rocket"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Hablemos del siguiente paso",
+    "description": "Estamos disponibles para revisar la propuesta, ajustar el alcance y coordinar el inicio del proyecto.",
+    "email": "mario@quadcommit.dev",
+    "website": "quadcommit.dev",
+    "location": "Santo Domingo, República Dominicana",
+    "availability": "Lunes a viernes · 9:00–18:00 (AST)",
+    "secondaryEmail": "steven@quadcommit.dev",
+    "thirdEmail": "gabriel@quadcommit.dev",
+    "team": "Mario · Gabriel · Steven",
+    "cta": {
+      "label": "Escribir al equipo",
+      "mailto": "mailto:mario@quadcommit.dev?cc=steven%40quadcommit.dev%2Cgabriel%40quadcommit.dev&subject=Propuesta%20Voucherlize%20%E2%80%94%20Ing.%20Scarling"
+    },
+    "pdf": {
+      "label": "Descargar PDF",
+      "href": "pdf/scarling.pdf"
+    },
+    "signature": {
+      "title": "Equipo QuadCommit",
+      "subtitle": "Software Engineering & Digital Transformation"
+    }
+  }
+}

@@ -1,0 +1,458 @@
+/* ============================================================
+   print.css — PDF / print presentation
+   Proposal Engine · QuadCommit
+
+   The live site is a scrolling, animated, sidebar-driven
+   document. For PDF we remove the app chrome, force every
+   reveal to its final state and start each section on a new
+   page so the result reads like a proposal, not a screenshot.
+   ============================================================ */
+
+@page {
+  size: A4;
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #001925;
+    font-size: 9.5pt;
+    line-height: 1.5;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* App chrome and interactive-only elements */
+  .sidebar,
+  .sidebar-backdrop,
+  .mobile-header,
+  .loader,
+  .error-state,
+  .skip-link,
+  .hero__actions,
+  .contact__aside .btn {
+    display: none !important;
+  }
+
+  .content {
+    margin-left: 0 !important;
+    min-height: 0 !important;
+  }
+
+  /* Document flow */
+  .section {
+    min-height: 0 !important;
+    padding: 0 0 8mm !important;
+    justify-content: flex-start !important;
+  }
+
+  .section + .section {
+    border-top: 0 !important;
+  }
+
+  .section:not(#hero) {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  #hero {
+    min-height: 248mm !important;
+    justify-content: center !important;
+    padding-bottom: 0 !important;
+  }
+
+  .container {
+    max-width: 100% !important;
+    gap: 6mm;
+  }
+
+  .container--narrow {
+    max-width: 100% !important;
+  }
+
+  /* Restore the desktop grids. The print viewport is narrow enough
+     to trigger the mobile breakpoints in responsive.css, which would
+     otherwise turn every card grid into a single column. */
+  .card-grid--3 {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .stack-list {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .stack-group__grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .steps {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+
+  .pricing {
+    grid-template-columns: 0.9fr 1.1fr !important;
+  }
+
+  .contact {
+    grid-template-columns: 1.4fr 1fr !important;
+  }
+
+  .contact__details {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .milestone {
+    grid-template-columns: 46px 1fr auto !important;
+  }
+
+  .milestone__amount {
+    grid-column: auto !important;
+    align-items: flex-end !important;
+  }
+
+  .milestone__amount span {
+    text-align: right !important;
+  }
+
+  .maintenance-card__head {
+    grid-template-columns: auto 1fr auto !important;
+  }
+
+  .maintenance-card__price {
+    grid-column: auto !important;
+    align-items: flex-end !important;
+    text-align: right !important;
+  }
+
+  .diagram {
+    padding: 6mm !important;
+  }
+
+  .diagram__row--bottom {
+    flex-direction: row !important;
+  }
+
+  .diagram__node {
+    flex: 1 !important;
+  }
+
+  /* Architecture: fit the diagram and all six component cards on
+     a single page instead of spilling the last row onto a new one. */
+  #architecture .container {
+    gap: 4mm;
+  }
+
+  #architecture .diagram {
+    gap: 3.5mm !important;
+    padding: 4.5mm !important;
+  }
+
+  #architecture .diagram__row {
+    gap: 3mm;
+  }
+
+  #architecture .diagram__row--top {
+    gap: 2mm;
+    margin-top: 1.5mm;
+  }
+
+  #architecture .diagram__node {
+    gap: 2.5mm;
+    padding: 2.5mm 3.5mm;
+  }
+
+  #architecture .diagram__node-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  #architecture .diagram__node-icon [data-lucide] {
+    width: 16px;
+    height: 16px;
+  }
+
+  #architecture .diagram__row--modules {
+    gap: 2mm;
+    padding: 2mm 3mm;
+  }
+
+  #architecture .diagram__module {
+    padding: 1mm 2.5mm;
+  }
+
+  #architecture .card-grid {
+    gap: 3mm;
+  }
+
+  #architecture .card {
+    gap: 1.5mm;
+    padding: 3mm;
+  }
+
+  #architecture .card__icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  #architecture .card__icon [data-lucide] {
+    width: 16px;
+    height: 16px;
+  }
+
+  #architecture .card__list {
+    gap: 1mm;
+  }
+
+  #architecture .card__list li {
+    font-size: 8pt;
+  }
+
+  /* Pricing: keep the summary, maintenance, terms and exclusions
+     together instead of leaving the exclusions alone on a page. */
+  #pricing .container {
+    gap: 2.5mm;
+  }
+
+  #pricing .section__header {
+    gap: 1.5mm;
+  }
+
+  #pricing .section__title {
+    font-size: 17pt;
+  }
+
+  #pricing .section__description {
+    font-size: 9.5pt;
+  }
+
+  #pricing .pricing {
+    gap: 4mm;
+  }
+
+  #pricing .pricing__summary {
+    gap: 3mm;
+  }
+
+  #pricing .pricing__total {
+    gap: 1mm;
+    padding: 4mm;
+  }
+
+  #pricing .pricing__amount {
+    margin: 1mm 0;
+  }
+
+  #pricing .pricing__amount strong {
+    font-size: 24pt;
+  }
+
+  #pricing .pricing__tax,
+  #pricing .pricing__grand,
+  #pricing .pricing__note p {
+    font-size: 8pt;
+  }
+
+  #pricing .pricing__grand {
+    padding-top: 2.5mm;
+  }
+
+  #pricing .pricing__note {
+    padding: 2.5mm;
+  }
+
+  #pricing .pricing__milestones {
+    gap: 3mm;
+  }
+
+  #pricing .milestone {
+    gap: 3mm;
+    padding: 3.5mm;
+  }
+
+  #pricing .maintenance-card {
+    gap: 3mm;
+    padding: 4mm;
+  }
+
+  #pricing .maintenance-card__price strong {
+    font-size: 24pt;
+  }
+
+  #pricing .maintenance-card__list {
+    gap: 1mm 5mm;
+  }
+
+  #pricing .maintenance-card__list li {
+    font-size: 7.4pt;
+  }
+
+  #pricing .maintenance-card__note {
+    padding-top: 2mm;
+    font-size: 6.8pt;
+  }
+
+  #pricing .card-grid {
+    gap: 3mm;
+  }
+
+  #pricing .card {
+    gap: 1.5mm;
+    padding: 3mm;
+  }
+
+  #pricing .card__text {
+    font-size: 8.2pt;
+  }
+
+  #pricing .callout {
+    padding: 3.5mm;
+  }
+
+  #pricing .callout__head {
+    margin-bottom: 2mm;
+  }
+
+  #pricing .callout__list {
+    gap: 1mm;
+  }
+
+  #pricing .callout__list li {
+    font-size: 7.4pt;
+    line-height: 1.35;
+  }
+
+  #pricing {
+    padding-bottom: 2mm !important;
+  }
+
+  /* Headings and copy */
+  .hero__title {
+    font-size: 34pt;
+  }
+
+  .hero__subtitle {
+    font-size: 12pt;
+  }
+
+  .hero__eyebrow {
+    font-size: 8pt;
+  }
+
+  .section__title {
+    font-size: 19pt;
+  }
+
+  .section__description {
+    max-width: 100%;
+    font-size: 10pt;
+  }
+
+  .section__header {
+    gap: 2mm;
+    max-width: 100%;
+  }
+
+  .card__title,
+  .milestone__body h3,
+  .step__body h3 {
+    font-size: 10.5pt;
+  }
+
+  .card__text,
+  .stack-item__body p,
+  .roadmap__description,
+  .milestone__body p,
+  .step__body p {
+    font-size: 8.8pt;
+  }
+
+  /* Cards and grids */
+  .card-grid,
+  .stack-list,
+  .stack-group__grid {
+    gap: 4mm;
+  }
+
+  .card,
+  .stack-item,
+  .milestone,
+  .roadmap__card,
+  .step,
+  .diagram,
+  .pricing__total,
+  .pricing__note,
+  .maintenance-card,
+  .contact__primary,
+  .contact__signature,
+  .contact__detail,
+  .stack-chip {
+    box-shadow: none !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .card {
+    padding: 4mm;
+  }
+
+  .pricing {
+    gap: 5mm;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .pricing__total {
+    padding: 6mm;
+  }
+
+  .pricing__amount strong {
+    font-size: 30pt;
+  }
+
+  .maintenance-card {
+    padding: 5mm;
+  }
+
+  .maintenance-card__list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact {
+    gap: 5mm;
+  }
+
+  .contact__aside {
+    align-self: start;
+  }
+
+  /* Static diagram: no float, no hover lift */
+  .diagram__node,
+  .roadmap__dot.is-active {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  /* Reveal elements must be visible in the exported file */
+  .reveal,
+  .reveal-up,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto !important;
+  }
+
+  /* Links should read as text, not as blue web links */
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  [data-lucide] {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

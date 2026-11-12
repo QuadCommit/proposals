@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Propuesta comercial y técnica · Voucherlize · QuadCommit" />
+  <meta name="color-scheme" content="light" />
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet" />
+
+  <title>Propuesta · Voucherlize — QuadCommit</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="stylesheet" href="assets/css/print.css" media="print" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg" />
+</head>
+
+<body>
+  <a class="skip-link" href="#proposal-content">Saltar al contenido</a>
+
+  <!-- ============================================================
+       SIDEBAR (fixed, desktop)
+  ============================================================ -->
+  <aside class="sidebar" id="sidebar" aria-label="Panel de navegación">
+    <div class="sidebar__top">
+      <a class="brand" href="#hero" data-nav-link>
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2 2 7l10 5 10-5-10-5Z" />
+            <path d="m2 17 10 5 10-5" />
+            <path d="m2 12 10 5 10-5" />
+          </svg>
+        </span>
+        <span class="brand__text">
+          <strong data-bind="meta.company.name">QuadCommit</strong>
+          <small data-bind="meta.company.tagline">Software Engineering</small>
+        </span>
+      </a>
+    </div>
+
+    <div class="sidebar__client">
+      <span class="sidebar__client-label" data-bind="hero.eyebrow">Propuesta</span>
+      <span class="sidebar__client-name" data-bind="meta.client.name">Cliente</span>
+      <span class="sidebar__client-meta">
+        <span data-bind="meta.date">Fecha</span> · <span data-bind="meta.version">v</span>
+      </span>
+    </div>
+
+    <nav class="sidebar__nav" id="sidebar-nav" aria-label="Secciones de la propuesta"></nav>
+
+    <div class="sidebar__bottom">
+      <div class="progress" role="progressbar" aria-label="Progreso de la propuesta" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="progress__header">
+          <span class="progress__label">Progreso</span>
+          <span class="progress__value" id="progress-value">0%</span>
+        </div>
+        <div class="progress__track">
+          <div class="progress__bar" id="progress-bar"></div>
+        </div>
+      </div>
+      <p class="sidebar__foot">
+        Preparado por <strong data-bind="meta.company.name">QuadCommit</strong>
+      </p>
+    </div>
+  </aside>
+
+  <!-- Backdrop for the mobile drawer -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop" hidden></div>
+
+  <!-- Mobile header bar -->
+  <header class="mobile-header">
+    <button class="icon-button" id="menu-toggle" aria-label="Abrir menú de navegación" aria-controls="sidebar" aria-expanded="false">
+      <i data-lucide="menu"></i>
+    </button>
+    <span class="mobile-header__title" data-bind="meta.client.name">Propuesta</span>
+    <span class="mobile-header__pill" data-bind="meta.version">v</span>
+  </header>
+
+  <!-- ============================================================
+       MAIN CONTENT (populated from data + section partials)
+  ============================================================ -->
+  <main class="content" id="proposal-content" tabindex="-1"></main>
+
+  <!-- Loading state -->
+  <div class="loader" id="loader" role="status" aria-live="polite">
+    <div class="loader__spinner" aria-hidden="true"></div>
+    <p class="loader__text">Cargando propuesta…</p>
+  </div>
+
+  <!-- Error state shown when data/partials cannot be fetched -->
+  <div class="error-state" id="error-state" hidden>
+    <i data-lucide="alert-triangle" class="error-state__icon"></i>
+    <h1>No se pudo cargar la propuesta</h1>
+    <p>
+      Este proyecto requiere servirse a través de un servidor web local
+      (por ejemplo <code>npx serve</code>, <code>python -m http.server</code>
+      o cualquier hosting estático).
+    </p>
+  </div>
+
+  <script src="https://unpkg.com/lucide@1.29.0/dist/umd/lucide.min.js"></script>
+  <script src="assets/js/proposal-loader.js" defer></script>
+  <script src="assets/js/navigation.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>

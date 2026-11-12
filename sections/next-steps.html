@@ -1,0 +1,22 @@
+<section class="section" id="next-steps" data-section>
+  <div class="container">
+    <header class="section__header reveal reveal-up" data-reveal>
+      <p class="section__eyebrow" data-bind="nextSteps.eyebrow">Próximos Pasos</p>
+      <h2 class="section__title" data-bind="nextSteps.title"></h2>
+      <p class="section__description" data-bind="nextSteps.description"></p>
+    </header>
+
+    <div class="steps">
+      <template data-repeat="nextSteps.steps">
+        <article class="step reveal reveal-up" data-reveal>
+          <div class="step__number" aria-hidden="true"><span data-bind="number"></span></div>
+          <span class="step__icon" aria-hidden="true"><i data-bind-icon="icon"></i></span>
+          <div class="step__body">
+            <h3 data-bind="title"></h3>
+            <p data-bind="description"></p>
+          </div>
+        </article>
+      </template>
+    </div>
+  </div>
+</section>

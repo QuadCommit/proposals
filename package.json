@@ -1,0 +1,14 @@
+{
+  "name": "quadcommit-proposals",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Shared proposal engine and per-client proposal data for QuadCommit.",
+  "scripts": {
+    "serve": "python -m http.server 8080",
+    "pdf": "node scripts/generate-pdf.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.65.0"
+  }
+}

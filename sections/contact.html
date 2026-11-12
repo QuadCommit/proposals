@@ -1,0 +1,75 @@
+<section class="section" id="contact" data-section>
+  <div class="container container--narrow">
+    <header class="section__header section__header--center reveal reveal-up" data-reveal>
+      <p class="section__eyebrow" data-bind="contact.eyebrow">Contacto</p>
+      <h2 class="section__title" data-bind="contact.title"></h2>
+      <p class="section__description" data-bind="contact.description"></p>
+    </header>
+
+    <div class="contact reveal reveal-up" data-reveal data-delay="1">
+      <div class="contact__main">
+        <a class="contact__primary" href="#" data-bind-href="contact.cta.mailto">
+          <span class="contact__primary-icon" aria-hidden="true"><i data-lucide="mail"></i></span>
+          <div>
+            <strong data-bind="contact.email"></strong>
+            <span data-bind="contact.cta.label">Escribir al equipo</span>
+          </div>
+        </a>
+
+        <dl class="contact__details">
+          <div class="contact__detail">
+            <dt><i data-lucide="globe" aria-hidden="true"></i><span class="sr-only">Sitio web</span></dt>
+            <dd data-bind="contact.website"></dd>
+          </div>
+          <div class="contact__detail">
+            <dt><i data-lucide="map-pin" aria-hidden="true"></i><span class="sr-only">Ubicación</span></dt>
+            <dd data-bind="contact.location"></dd>
+          </div>
+          <div class="contact__detail">
+            <dt><i data-lucide="clock" aria-hidden="true"></i><span class="sr-only">Horario</span></dt>
+            <dd data-bind="contact.availability"></dd>
+          </div>
+          <div class="contact__detail">
+            <dt><i data-lucide="mail" aria-hidden="true"></i><span class="sr-only">Correo de Steven</span></dt>
+            <dd data-bind="contact.secondaryEmail"></dd>
+          </div>
+          <div class="contact__detail">
+            <dt><i data-lucide="mail" aria-hidden="true"></i><span class="sr-only">Correo de Gabriel</span></dt>
+            <dd data-bind="contact.thirdEmail"></dd>
+          </div>
+          <div class="contact__detail">
+            <dt><i data-lucide="users" aria-hidden="true"></i><span class="sr-only">Equipo</span></dt>
+            <dd data-bind="contact.team"></dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="contact__aside">
+        <div class="contact__signature">
+          <span class="contact__seal" aria-hidden="true">QC</span>
+          <p>
+            <strong data-bind="contact.signature.title">Equipo QuadCommit</strong>
+            <span data-bind="contact.signature.subtitle">QuadCommit</span>
+          </p>
+        </div>
+        <a class="btn btn--primary btn--block" href="#" data-bind-href="contact.cta.mailto">
+          <i data-lucide="send" class="btn__icon"></i>
+          <span data-bind="contact.cta.label">Escribir al equipo</span>
+        </a>
+        <a class="btn btn--ghost btn--block" href="#" data-bind-href="contact.pdf.href" download>
+          <i data-lucide="download" class="btn__icon"></i>
+          <span data-bind="contact.pdf.label">Descargar PDF</span>
+        </a>
+      </div>
+    </div>
+
+    <footer class="contact__footer reveal reveal-up" data-reveal>
+      <p>
+        <span data-bind="meta.documentType">Propuesta</span> ·
+        <span data-bind="meta.project.name">Proyecto</span> ·
+        <span data-bind="meta.version">v</span>
+      </p>
+      <p>&copy; <span id="footer-year"></span> <span data-bind="meta.company.name">QuadCommit</span>. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+</section>

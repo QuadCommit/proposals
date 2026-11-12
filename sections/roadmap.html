@@ -1,0 +1,35 @@
+<section class="section" id="roadmap" data-section>
+  <div class="container">
+    <header class="section__header reveal reveal-up" data-reveal>
+      <p class="section__eyebrow" data-bind="roadmap.eyebrow">Fases Futuras</p>
+      <h2 class="section__title" data-bind="roadmap.title"></h2>
+      <p class="section__description" data-bind="roadmap.description"></p>
+    </header>
+
+    <div class="roadmap">
+      <template data-repeat="roadmap.phases">
+        <article class="roadmap__item">
+          <div class="roadmap__rail" aria-hidden="true">
+            <span class="roadmap__dot" data-bind-status></span>
+          </div>
+          <div class="roadmap__card">
+            <div class="roadmap__meta">
+              <span class="roadmap__phase" data-bind="phase"></span>
+              <span class="tag tag--slate" data-bind-status data-bind="statusLabel"></span>
+            </div>
+            <h3 class="roadmap__title" data-bind="title"></h3>
+            <p class="roadmap__description" data-bind="description"></p>
+            <ul class="roadmap__items">
+              <template data-repeat="items">
+                <li>
+                  <i data-lucide="check" class="roadmap__check" aria-hidden="true"></i>
+                  <span data-bind="."></span>
+                </li>
+              </template>
+            </ul>
+          </div>
+        </article>
+      </template>
+    </div>
+  </div>
+</section>
