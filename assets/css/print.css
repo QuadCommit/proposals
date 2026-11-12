@@ -102,17 +102,23 @@
     grid-template-columns: 1fr 1fr !important;
   }
 
-  .milestone {
-    grid-template-columns: 46px 1fr auto !important;
+  .pricing__milestones {
+    grid-template-columns: 1fr 1fr !important;
   }
 
-  .milestone__amount {
-    grid-column: auto !important;
-    align-items: flex-end !important;
+  #pricing .milestone__top {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 1mm !important;
   }
 
-  .milestone__amount span {
-    text-align: right !important;
+  #pricing .milestone__amount {
+    flex-direction: row !important;
+    align-items: baseline !important;
+  }
+
+  #pricing .milestone__amount span {
+    text-align: left !important;
   }
 
   .maintenance-card__head {
@@ -211,7 +217,7 @@
   /* Pricing: keep the summary, maintenance, terms and exclusions
      together instead of leaving the exclusions alone on a page. */
   #pricing .container {
-    gap: 2.5mm;
+    gap: 2mm;
   }
 
   #pricing .section__header {
@@ -227,7 +233,7 @@
   }
 
   #pricing .pricing {
-    gap: 4mm;
+    gap: 3mm;
   }
 
   #pricing .pricing__summary {
@@ -262,17 +268,49 @@
   }
 
   #pricing .pricing__milestones {
-    gap: 3mm;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2.5mm !important;
   }
 
   #pricing .milestone {
-    gap: 3mm;
-    padding: 3.5mm;
+    gap: 1.5mm;
+    padding: 2.5mm;
+  }
+
+  #pricing .milestone__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  #pricing .milestone__icon [data-lucide] {
+    width: 15px;
+    height: 15px;
+  }
+
+  #pricing .milestone__percent {
+    font-size: 7pt;
+  }
+
+  #pricing .milestone__body h3 {
+    font-size: 9pt;
+    margin-bottom: 0.5mm;
+  }
+
+  #pricing .milestone__body p {
+    font-size: 7.6pt;
+  }
+
+  #pricing .milestone__amount strong {
+    font-size: 10pt;
+  }
+
+  #pricing .milestone__amount span {
+    font-size: 6.8pt;
   }
 
   #pricing .maintenance-card {
-    gap: 3mm;
-    padding: 4mm;
+    gap: 2.5mm;
+    padding: 3.5mm;
   }
 
   #pricing .maintenance-card__price strong {
@@ -288,17 +326,17 @@
   }
 
   #pricing .maintenance-card__note {
-    padding-top: 2mm;
-    font-size: 6.8pt;
+    padding-top: 1.5mm;
+    font-size: 6.6pt;
   }
 
   #pricing .card-grid {
-    gap: 3mm;
+    gap: 2.5mm;
   }
 
   #pricing .card {
     gap: 1.5mm;
-    padding: 3mm;
+    padding: 2.5mm;
   }
 
   #pricing .card__text {
@@ -306,20 +344,20 @@
   }
 
   #pricing .callout {
-    padding: 3.5mm;
+    padding: 3mm;
   }
 
   #pricing .callout__head {
-    margin-bottom: 2mm;
+    margin-bottom: 1.5mm;
   }
 
   #pricing .callout__list {
-    gap: 1mm;
+    gap: 0.8mm;
   }
 
   #pricing .callout__list li {
-    font-size: 7.4pt;
-    line-height: 1.35;
+    font-size: 7.2pt;
+    line-height: 1.3;
   }
 
   #pricing {

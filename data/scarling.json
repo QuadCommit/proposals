@@ -322,26 +322,40 @@
   "pricing": {
     "eyebrow": "Inversión",
     "title": "Una inversión acotada para un MVP operativo",
-    "description": "El proyecto se estima en 120 horas de ingeniería durante 3 semanas. La inversión total es de US$1,800, sin ITBIS, pagadera 50% al inicio y 50% contra la aceptación final.",
+    "description": "El proyecto se estima en 120 horas de ingeniería durante 3 semanas. La inversión total es de RD$109,000, sin ITBIS, pagadera en 4 cuotas de RD$27,250.",
     "total": {
       "label": "Desarrollo Integral MVP",
-      "amount": "$1,800",
-      "currency": "USD",
+      "amount": "109,000",
+      "currency": "RD$",
       "taxNote": "ITBIS no aplica para este proyecto",
-      "totalWithTax": "USD $1,800 · Inversión total del proyecto",
-      "note": "Incluye análisis, desarrollo, pruebas con facturas reales, despliegue y transferencia. Los consumos de WhatsApp, IA y hosting se pagan directamente a los proveedores."
+      "totalWithTax": "RD$ 109,000 · Inversión total del proyecto",
+      "note": "Incluye análisis, desarrollo, pruebas con facturas reales, despliegue y transferencia. La inversión se paga en 4 cuotas de RD$27,250. Los consumos de WhatsApp, IA y hosting se pagan directamente a los proveedores."
     },
     "milestones": [
       {
-        "percent": "50%",
-        "amount": "$900 USD",
+        "percent": "25%",
+        "amount": "RD$ 27,250",
         "name": "Anticipo de inicio",
         "trigger": "Firma del acuerdo y entrega de accesos para iniciar la Semana 1",
         "icon": "file-signature"
       },
       {
-        "percent": "50%",
-        "amount": "$900 USD",
+        "percent": "25%",
+        "amount": "RD$ 27,250",
+        "name": "Avance Semana 1",
+        "trigger": "Demo del canal de WhatsApp, extracción con IA y fallback operativo",
+        "icon": "message-circle"
+      },
+      {
+        "percent": "25%",
+        "amount": "RD$ 27,250",
+        "name": "Avance Semana 2",
+        "trigger": "Validación, confirmaciones, ingresos/gastos y libro Excel",
+        "icon": "file-spreadsheet"
+      },
+      {
+        "percent": "25%",
+        "amount": "RD$ 27,250",
         "name": "Aceptación final",
         "trigger": "Demo final, pruebas de aceptación y despliegue en producción",
         "icon": "rocket"
@@ -361,7 +375,7 @@
         "Actualizaciones de seguridad y verificación de respaldos",
         "Revisión de los reportes mensuales y bimensuales"
       ],
-      "note": "Costo recurrente separado de la inversión de US$1,800. Inicia el mes siguiente al Go-Live, después de los 30 días de garantía por defectos del alcance entregado. No incluye nuevas funcionalidades, integraciones adicionales ni consumos de terceros. Facturación mensual; cancelación con 30 días de aviso. Las horas no utilizadas no se acumulan."
+      "note": "Costo recurrente separado de la inversión de RD$109,000. Inicia el mes siguiente al Go-Live, después de los 30 días de garantía por defectos del alcance entregado. No incluye nuevas funcionalidades, integraciones adicionales ni consumos de terceros. Facturación mensual; cancelación con 30 días de aviso. Las horas no utilizadas no se acumulan."
     },
     "terms": [
       {
@@ -438,7 +452,7 @@
       {
         "number": "02",
         "title": "Firma y anticipo",
-        "description": "Formalización del acuerdo y pago del 50% para reservar el cronograma.",
+        "description": "Formalización del acuerdo y pago de la primera cuota (25%) para reservar el cronograma.",
         "icon": "pen-line"
       },
       {
